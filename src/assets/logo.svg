@@ -1,0 +1,21 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 10H40C45.5228 10 50 14.4772 50 20V30C50 35.5228 45.5228 40 40 40H20C14.4772 40 10 35.5228 10 30V20C10 14.4772 14.4772 10 20 10Z" fill="url(#paint0_linear)"/>
+  <path d="M65 15H70.5L77 35H71.5L70.5 31H65L64 35H58.5L65 15ZM69.5 27L68 21.5L66.5 27H69.5Z" fill="#333333"/>
+  <path d="M80 15H85.5V30H93V35H80V15Z" fill="#333333"/>
+  <path d="M95 15H109V19.5H100.5V22.5H108V27H100.5V30.5H109V35H95V15Z" fill="#333333"/>
+  <path d="M112 15H126V19.5H117.5V22.5H125V27H117.5V30.5H126V35H112V15Z" fill="#333333"/>
+  <path d="M129 15H134.5V30H142V35H129V15Z" fill="#333333"/>
+  <path d="M145 15H150.5V35H145V15Z" fill="#333333"/>
+  <path d="M155 15H160.5L167 27V15H172.5V35H167L160.5 23V35H155V15Z" fill="#333333"/>
+  <path d="M175 15H189V19.5H180.5V22.5H188V27H180.5V30.5H189V35H175V15Z" fill="#333333"/>
+  <path d="M25 20V30" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M30 20V30" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M35 20V30" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M25 25H35" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="10" y1="25" x2="50" y2="25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0072FF"/>
+      <stop offset="1" stop-color="#00C6FF"/>
+    </linearGradient>
+  </defs>
+</svg>
