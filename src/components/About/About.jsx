@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import fotoEmerson from '../../assets/foto_emerson.png';
 
 const AboutSection = styled.section`
-  padding: 80px 0;
-  background-color: #f9f9f9;
+  padding: 100px 0;
+  background: linear-gradient(180deg, #0a0a0a, #111827);
+  color: #fff;
 `;
 
 const AboutContainer = styled.div`
@@ -17,21 +19,25 @@ const AboutContainer = styled.div`
 `;
 
 const AboutTitle = styled(motion.h2)`
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  color: #00f0ff;
+  margin-bottom: 30px;
   text-align: center;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
   position: relative;
-  
+
   &:after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 120px;
     height: 4px;
-    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    background: linear-gradient(90deg, #0072ff, #00f0ff);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.7);
   }
 `;
 
@@ -39,40 +45,52 @@ const AboutContent = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 40px;
-  
+  margin-top: 50px;
+
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
 const AboutText = styled(motion.div)`
   flex: 1;
   padding: 0 20px;
-  
+
   p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 20px;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #ddd;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
   }
-  
+
   @media (max-width: 768px) {
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 `;
 
 const AboutImage = styled(motion.div)`
   flex: 1;
   padding: 0 20px;
-  
+  display: flex;
+  justify-content: center;
+
   img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 240, 255, 0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 25px 60px rgba(0, 240, 255, 0.45);
+    }
   }
-  
+
   @media (max-width: 768px) {
     padding: 0;
   }
@@ -83,39 +101,45 @@ const About = () => {
     <AboutSection id="sobre">
       <AboutContainer>
         <AboutTitle
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
           Sobre Nós
         </AboutTitle>
-        
+
         <AboutContent>
           <AboutText
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            initial={{ opacity: 0, x: -50, scale: 0.95 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
             <p>
-              Fundado em 2010, o Escritório ProContábil nasceu com a missão de oferecer serviços contábeis de excelência para empresas de todos os portes. Nossa trajetória é marcada pelo compromisso com a ética, transparência e resultados consistentes para nossos clientes.
+              Fundado para oferecer <strong>soluções jurídicas inovadoras e tecnológicas</strong>, o Escritório Emerson Fonseca combina <strong>precisão, agilidade e atendimento humanizado</strong>. Utilizamos ferramentas digitais avançadas, proporcionando processos mais seguros e estratégicos.
             </p>
             <p>
-              Com uma equipe de profissionais altamente qualificados e em constante atualização, nos destacamos no mercado pela capacidade de aliar conhecimento técnico com atendimento personalizado, entendendo as necessidades específicas de cada negócio.
+              Nossa equipe alia <strong>expertise jurídica</strong> com <strong>metodologias modernas</strong>, analisando cada caso com inteligência aplicada, garantindo soluções personalizadas que antecipam desafios e otimizam resultados.
             </p>
             <p>
-              Ao longo destes anos, construímos uma sólida reputação baseada na confiança e na entrega de soluções eficientes que contribuem para o crescimento sustentável das empresas que atendemos. Nossa abordagem combina métodos tradicionais com as mais modernas tecnologias disponíveis no mercado.
+              Construímos uma reputação sólida baseada em <strong>confiança, integridade e inovação</strong>, integrando práticas jurídicas tradicionais às mais modernas tecnologias para potencializar cada atendimento.
+            </p>
+            <p>
+              Nosso compromisso vai além de oferecer serviços jurídicos: buscamos <strong>transformar a experiência do cliente</strong> com transparência, eficiência e resultados consistentes, fortalecendo relações duradouras e seguras.
             </p>
           </AboutText>
-          
+
           <AboutImage
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            initial={{ opacity: 0, x: 50, scale: 0.95 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Equipe do Escritório ProContábil" />
+            <img
+              src={fotoEmerson}
+              alt="Equipe do Escritório Emerson Fonseca"
+            />
           </AboutImage>
         </AboutContent>
       </AboutContainer>

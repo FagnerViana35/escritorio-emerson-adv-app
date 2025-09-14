@@ -1,32 +1,35 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logoSvg from '../../assets/logo_procontabil.jpg';
+import logoSvg from '../../assets/logo_adv.png';
 
 const Nav = styled.nav`
-  background: #fff;
+  background: linear-gradient(90deg, #0056b3, #00c6ff);
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem calc((100vw - 1200px) / 2);
-  z-index: 10;
+  z-index: 1000;
   position: sticky;
   top: 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 `;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
   cursor: pointer;
   
   img {
-    height: 80px;
+    height: 70px;
     width: auto;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 `;
 
@@ -41,7 +44,12 @@ const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #0056b3;
+    color: #fff;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ffe600;
+    }
   }
 `;
 
@@ -50,10 +58,8 @@ const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
 
   @media screen and (max-width: 768px) {
-    display: flex;
     flex-direction: column;
     width: 100%;
     height: 90vh;
@@ -62,7 +68,9 @@ const NavMenu = styled.ul`
     left: ${({ $isOpen }) => ($isOpen ? '0' : '-100%')};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #fff;
+    background: #f9f9f9;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding-top: 50px;
   }
 `;
 
@@ -75,18 +83,19 @@ const NavItem = styled.li`
 `;
 
 const NavLinks = styled.a`
-  color: #333;
+  color: #02051cff;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   height: 100%;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
+  transition: all 0.3s ease;
 
   &:hover {
-    color: #0056b3;
-    transition: all 0.3s ease;
+    color: #02051cff;
+    transform: scale(1.05);
   }
 
   @media screen and (max-width: 768px) {
@@ -97,22 +106,21 @@ const NavLinks = styled.a`
 
     &:hover {
       color: #0056b3;
-      transition: all 0.3s ease;
+      background: #e0f0ff;
+      border-radius: 8px;
+      transform: scale(1);
     }
   }
 `;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggle = () => setIsOpen(!isOpen);
 
   return (
     <Nav>
       <Logo>
-        <img src={logoSvg} alt="Pró Contábil Logo" />
+        <img src={logoSvg} alt="Logo Escritório" />
       </Logo>
       <MobileIcon onClick={toggle}>
         {isOpen ? <FaTimes /> : <FaBars />}

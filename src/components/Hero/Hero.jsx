@@ -88,26 +88,32 @@ const Hero = () => {
     }),
   };
 
-  const services = [
-    {
-      title: 'Abrimos sua empresa',
-      description: 'Fechando um contrato anual com a Pró Contábil, o serviço de abertura da sua empresa é gratuito.',
-      buttonText: 'Ver Mais',
-      buttonLink: '#servicos',
-    },
-    {
-      title: 'Cuidamos da sua Contabilidade',
-      description: 'Realizamos toda a sua gestão contábil em tempo real e de forma consultiva com muita agilidade e transparência!',
-      buttonText: '',
-      buttonLink: '',
-    },
-    {
-      title: 'Cuidamos da Gestão Financeira',
-      description: 'Organizamos sua Gestão Financeira para você ter mais liberdade para empreender e menos esforço para crescer.',
-      buttonText: 'Veja mais',
-      buttonLink: '#servicos',
-    },
-  ];
+const services = [
+  {
+    title: 'Abertura de Empresas',
+    description: 'Assessoria jurídica completa para abertura e regularização do seu negócio, com segurança e agilidade.',
+    buttonText: 'Saiba Mais',
+    buttonLink: '#servicos',
+  },
+  {
+    title: 'Consultoria Empresarial',
+    description: 'Orientação jurídica estratégica para empresas, prevenindo riscos e potencializando resultados.',
+    buttonText: 'Conheça',
+    buttonLink: '#servicos',
+  },
+  {
+    title: 'Gestão de Contratos',
+    description: 'Elaboração, revisão e gestão de contratos empresariais para garantir tranquilidade e proteção jurídica.',
+    buttonText: 'Veja mais',
+    buttonLink: '#servicos',
+  },
+  {
+    title: 'Defesa em Processos Judiciais',
+    description: 'Atuação especializada na defesa dos interesses da sua empresa em processos judiciais e administrativos.',
+    buttonText: 'Entenda',
+    buttonLink: '#servicos',
+  },
+];
 
   return (
     <HeroContainer id="home">
@@ -117,8 +123,8 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <HeroH1>Escritório de Contabilidade Pró Contábil</HeroH1>
-          <HeroP>Soluções contábeis completas para o seu negócio</HeroP>
+          <HeroH1>Emerson Fonseca Advocacia Inteligente</HeroH1>
+          <HeroP>Soluções jurídicas inteligentes para o seu negócio</HeroP>
         </motion.div>
         <CardWrapper>
           {services.map((service, index) => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const FooterContainer = styled.footer`
   background-color: #1a1a1a;
@@ -161,30 +161,30 @@ const WhatsAppButton = styled.a`
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <>
       <FooterContainer>
         <FooterContent>
           <FooterColumn>
-            <h3>Escritório ProContábil</h3>
-            <p>Oferecemos soluções contábeis completas e personalizadas para empresas de todos os portes, com foco em resultados e atendimento de excelência.</p>
+            <h3>Escritório Emerson Fonseca</h3>
+            <p>Atuamos com advocacia especializada, oferecendo atendimento personalizado e soluções jurídicas eficazes para nossos clientes.</p>
             <SocialLinks>
-              <SocialIcon href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <SocialIcon href="https://www.facebook.com/people/Emerson-Fonseca/100093203257596/" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF />
               </SocialIcon>
-              <SocialIcon href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter />
+              <SocialIcon href="https://www.linkedin.com/in/emerson-fonseca-018ab555/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedinIn />
               </SocialIcon>
-              <SocialIcon href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <SocialIcon href="https://www.instagram.com/emersonfonseca.advogado/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </SocialIcon>
-              <SocialIcon href="https://www.linkedin.com/in/dorivaldo-antonio-silveira-2937a960/" target="_blank" rel="noopener noreferrer">
-                <FaLinkedinIn />
+              <SocialIcon href="https://wa.me/5516997445634" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp />
               </SocialIcon>
             </SocialLinks>
           </FooterColumn>
-          
+
           <FooterColumn>
             <h3>Links Rápidos</h3>
             <FooterLinks>
@@ -192,48 +192,24 @@ const Footer = () => {
               <li><a href="#sobre">Sobre Nós</a></li>
               <li><a href="#servicos">Serviços</a></li>
               <li><a href="#contato">Contato</a></li>
-              <li><a href="#">Área do Cliente</a></li>
             </FooterLinks>
           </FooterColumn>
-          
-          <FooterColumn>
-            <h3>Serviços</h3>
-            <FooterLinks>
-              <li><a href="#servicos">Contabilidade Empresarial</a></li>
-              <li><a href="#servicos">Assessoria Fiscal e Tributária</a></li>
-              <li><a href="#servicos">Departamento Pessoal</a></li>
-              <li><a href="#servicos">Contabilidade Digital</a></li>
-              <li><a href="#servicos">Consultoria Empresarial</a></li>
-              <li><a href="#servicos">Análise de Desempenho</a></li>
-            </FooterLinks>
-          </FooterColumn>
-          
+
           <FooterColumn>
             <h3>Contato</h3>
-            <p>
-              <strong>Endereço:</strong><br />
-              Av. São Carlos 2205, 2º andar, sala 205<br />
-              São Carlos - SP, CEP 13560-900
-
-            </p>
-            <p>
-              <strong>Telefone:</strong><br />
-              (16) 9 9601 0779<br />
-            </p>
-            <p>
-              <strong>E-mail:</strong><br />
-              dorivaldo@procontabil.net.br
-            </p>
+            <p><FaMapMarkerAlt /> Major José Inácio, 2050, Sala 403<br />São Carlos - SP, CEP 13560-901</p>
+            <p><FaPhone /> +55 16 99744-5634</p>
+            <p><FaEnvelope /> emerson@advocacia.com.br</p>
           </FooterColumn>
         </FooterContent>
-        
+
         <Copyright>
-          <p>&copy; {currentYear} Escritório ProContábil. Todos os direitos reservados.</p>
+          <p>&copy; {currentYear} Escritório Emerson Fonseca. Todos os direitos reservados.</p>
         </Copyright>
       </FooterContainer>
-      
+
       <WhatsAppButton 
-        href="https://wa.me/5516996010779?text=Ol%C3%A1%2C%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5e%20sobre%20os%20servi%C3%A7os%20do%20Escrit%C3%B3rio%20ProCont%C3%A1bil." 
+        href="https://wa.me/5516997445634?text=Ol%C3%A1%2C%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20do%20Escrit%C3%B3rio." 
         target="_blank" 
         rel="noopener noreferrer"
         aria-label="Contato via WhatsApp"

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaCalculator, FaChartLine, FaFileInvoiceDollar, FaHandshake, FaLaptop, FaUserTie } from 'react-icons/fa';
+import { FaBalanceScale, FaBriefcase, FaCalculator, FaChartLine, FaFileContract, FaFileInvoiceDollar, FaGavel, FaHandshake, FaLaptop, FaShieldAlt, FaUsers, FaUserTie } from 'react-icons/fa';
 
 const ServicesSection = styled.section`
   padding: 80px 0;
@@ -87,37 +87,38 @@ const Services = () => {
   const servicesData = [
     {
       id: 1,
-      icon: <FaCalculator />,
-      title: 'Contabilidade Empresarial',
-      description: 'Serviços completos de contabilidade para empresas de todos os portes, incluindo classificação e registro de documentos, elaboração de demonstrações financeiras e relatórios gerenciais personalizados.'
+      icon: <FaBalanceScale />,
+      title: 'Pensão Alimentícia',
+      description: 'Atuação especializada em ações de fixação, revisão e execução de pensão alimentícia, assegurando o bem-estar, a saúde e o desenvolvimento das crianças e dependentes, sempre com base na legislação vigente e no equilíbrio das responsabilidades familiares.'
     },
     {
       id: 2,
-      icon: <FaFileInvoiceDollar />,
-      title: 'Assessoria Fiscal e Tributária',
-      description: 'Planejamento tributário estratégico, apuração e controle de impostos, preparação e revisão de obrigações acessórias, e orientação sobre benefícios fiscais disponíveis para o seu negócio.'
+      icon: <FaUsers />,
+      title: 'Família',
+      description: 'O Direito de Família envolve questões delicadas e importantes, como divórcios, guarda de filhos, regulamentação de visitas, partilha de bens e adoção. Nosso trabalho busca soluções justas e humanizadas, sempre prezando pela proteção da família e pelo respeito aos vínculos afetivos.'
+
     },
     {
       id: 3,
-      icon: <FaUserTie />,
-      title: 'Departamento Pessoal',
-      description: 'Gestão completa da folha de pagamento, admissões e demissões, férias, 13º salário, e todas as obrigações trabalhistas e previdenciárias para manter sua empresa em conformidade com a legislação.'
+      icon: <FaGavel />,
+      title: 'Consumidor',
+      description: 'Defesa dos direitos do consumidor em casos de cobranças indevidas, cláusulas abusivas, contratos irregulares, vícios de produtos ou serviços e indenizações por danos. O objetivo é garantir a proteção do cliente frente a práticas ilegais ou prejudiciais nas relações de consumo.'
     },
     {
       id: 4,
-      icon: <FaLaptop />,
-      title: 'Contabilidade Digital',
-      description: 'Soluções tecnológicas modernas para gestão contábil, incluindo sistemas em nuvem, integração com plataformas de gestão empresarial e acesso a informações em tempo real.'
+      icon: <FaShieldAlt />,
+      title: 'Responsabilidade Civil',
+      description: 'Atuação em processos que envolvem reparação de danos materiais e morais, acidentes, falhas em serviços ou produtos, e demais situações em que haja a obrigação de indenizar. Trabalhamos para que nossos clientes recebam a compensação justa pelos prejuízos sofridos.'
     },
     {
       id: 5,
-      icon: <FaHandshake />,
-      title: 'Consultoria Empresarial',
-      description: 'Orientação estratégica para tomada de decisões, análise de viabilidade de novos negócios, reestruturação empresarial e desenvolvimento de controles internos eficientes.'
+      icon: <FaBriefcase />,
+      title: 'Trabalhista',
+      description: 'Assessoria completa em questões trabalhistas, como rescisões, horas extras, assédio, equiparação salarial, direitos de empregados e empregadores. Buscamos sempre soluções justas e alinhadas à legislação, prevenindo riscos e defendendo os interesses do cliente em juízo ou acordo.'
     },
     {
       id: 6,
-      icon: <FaChartLine />,
+      icon: <FaFileContract />,
       title: 'Análise de Desempenho',
       description: 'Avaliação detalhada dos indicadores financeiros e operacionais da sua empresa, identificando oportunidades de melhoria e estratégias para aumentar a rentabilidade do seu negócio.'
     }
